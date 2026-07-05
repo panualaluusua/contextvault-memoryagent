@@ -4,10 +4,11 @@ Last updated: 2026-07-05.
 
 ## Release state
 
-ContextVault is a local portfolio release candidate. It installs as a Python
-package, runs through CLI, HTTP, or read-only MCP, builds as a non-root Docker
-image, and needs no cloud credentials for its demo, tests, or deterministic
-evaluation.
+ContextVault is published as the canonical public repository at
+<https://github.com/panualaluusua/contextvault-memoryagent>. It installs as a
+Python package, runs through CLI, HTTP, or read-only MCP, builds as a non-root
+Docker image, and needs no cloud credentials for its demo, tests, or
+deterministic evaluation.
 
 ## Working now
 
@@ -26,6 +27,7 @@ evaluation.
 - English README, editable SVG architecture diagram and API documentation.
 - Versioned golden cases and generated with/without-memory baseline report.
 - GitHub Actions definition for tests, Ruff, MyPy, package build, dependency audit and Docker smoke.
+- First hosted GitHub Actions quality and container run passed on `main`.
 - Local proof captures for the CLI stale-memory flow and live Codex MCP usage.
 
 ## Latest verified evidence
@@ -62,7 +64,7 @@ Earlier milestone evidence remains in `EVALUATION.md`.
 
 ## Not completed
 
-- Public repository, hosted CI run and `v0.1.0` release.
+- Clean-clone verification and the `v0.1.0` release.
 - Clean-clone installation, test, demo and Docker verification.
 - Public edited demo video and LinkedIn case study.
 - Public hosting target and deployment; hosting is optional for the portfolio release.

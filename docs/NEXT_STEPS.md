@@ -2,20 +2,19 @@
 
 Last updated: 2026-07-05.
 
-ContextVault is a provider-neutral local release candidate. The implementation,
-tests, architecture diagram and raw proof recordings exist. The remaining work
-is release packaging and public verification.
+ContextVault is a provider-neutral public release candidate. The canonical
+repository, implementation, tests, architecture diagram, raw proof recordings
+and first successful hosted CI run exist. The remaining v0.1.0 work is
+clean-clone verification and immutable release publication.
 
 ## Public release
 
-1. Create the first curated commit and publish the canonical GitHub repository.
-2. Confirm that GitHub Actions passes tests, Ruff, MyPy, package build,
-   dependency audit and the Docker smoke test.
-3. Clone the public repository into a separate directory and verify install,
+1. Clone the public repository into a separate directory and verify install,
    tests, `contextvault demo`, evaluation and Docker Compose.
-4. Tag the verified commit as `v0.1.0` and create a GitHub release.
-5. Cut a 15–25 second stale-memory proof from the existing CLI capture.
-6. Publish the proof, infographic and LinkedIn case study, then add their public
+2. Confirm that GitHub Actions passes for the exact clean-clone-verified commit.
+3. Tag the verified commit as `v0.1.0` and create a GitHub release.
+4. Cut a 15–25 second stale-memory proof from the existing CLI capture.
+5. Publish the proof, infographic and LinkedIn case study, then add their public
    links to the README and portfolio hub.
 
 ## Engineering follow-ups

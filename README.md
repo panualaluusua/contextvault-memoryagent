@@ -1,5 +1,9 @@
 # ContextVault MemoryAgent
 
+[![CI](https://github.com/panualaluusua/contextvault-memoryagent/actions/workflows/ci.yml/badge.svg)](https://github.com/panualaluusua/contextvault-memoryagent/actions/workflows/ci.yml)
+
+Canonical repository: <https://github.com/panualaluusua/contextvault-memoryagent>
+
 ContextVault is an auditable, governed long-term memory layer for AI agents. It
 turns typed Markdown records and session preferences into compact memory packs
 with citations, temporal truth resolution, policy-controlled writes, and a

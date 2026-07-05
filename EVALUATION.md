@@ -346,3 +346,25 @@ as complete.
 - P11.6: **PASS**; this directory is now an independent Git work tree on
   `main`. Initial commit, remote creation, hosted CI and clean-clone proof remain
   pending user-controlled publication steps.
+
+## Iteration 12 rubric: public v0.1.0 release
+
+This rubric is frozen before release-state documentation, clean-clone
+verification, tagging, or GitHub Release creation. ContextVault v0.1.0 is
+complete only when every required gate is PASS against the same release commit.
+
+| Gate | Pass condition | Required evidence |
+|---|---|---|
+| R12.1 Canonical source | Public canonical repository exists on `main`, has a configured `origin`, and the local branch tracks `origin/main` | GitHub repository metadata and `git status --branch` |
+| R12.2 Hosted CI | GitHub Actions quality and container jobs pass for the exact commit tagged `v0.1.0` | successful workflow run and matching commit SHA |
+| R12.3 Clean install | A fresh GitHub clone installs successfully with development dependencies outside the source work tree | clone and install command log |
+| R12.4 Quality gates | Ruff, MyPy and the complete 47-test suite pass in the fresh clone | command output from the clean clone |
+| R12.5 Behavioral evidence | `contextvault demo` shows governed allow/block, cross-session recall, stale exclusion, selected source and a trace-derived receipt; evaluation reports 3/3, recall@3 1.000 and MRR 0.833 | clean-clone demo and evaluation assertions |
+| R12.6 Container evidence | The fresh clone builds the non-root image; the container health endpoint returns `ok`; runtime UID is `10001` | Docker build, health response and `id -u` output |
+| R12.7 Documentation integrity | README links the canonical repository and CI badge; current status and next steps distinguish completed release gates from optional follow-up work; local Markdown links resolve | documentation and link audit |
+| R12.8 Publication safety | Git history contains no raw videos, `.env`, databases, traces, private planning archive, handoff material or obvious real credentials | tracked-file and content scan |
+| R12.9 Immutable release | Annotated `v0.1.0` tag and public GitHub Release point to the exact commit that passed R12.2–R12.8 | tag SHA and GitHub Release metadata |
+
+Public cloud hosting, live Qwen/Ollama calls, multi-user identity, hybrid
+retrieval, a full 118-second video, and LinkedIn publication are explicitly
+outside the v0.1.0 completion gate.

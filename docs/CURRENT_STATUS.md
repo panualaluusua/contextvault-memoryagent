@@ -28,6 +28,11 @@ deterministic evaluation.
 - Versioned golden cases and generated with/without-memory baseline report.
 - GitHub Actions definition for tests, Ruff, MyPy, package build, dependency audit and Docker smoke.
 - First hosted GitHub Actions quality and container run passed on `main`.
+- Release-candidate hosted CI passed for commit `8435716`.
+- A new clone from the public GitHub URL passed installation, Ruff, MyPy,
+  47 tests, deterministic demo, 3/3 evaluation and publication-safety checks.
+- The clean-clone Docker image ran as UID 10001 and returned `status: ok` from
+  its health endpoint.
 - Local proof captures for the CLI stale-memory flow and live Codex MCP usage.
 
 ## Latest verified evidence
@@ -64,7 +69,7 @@ Earlier milestone evidence remains in `EVALUATION.md`.
 
 ## Not completed
 
-- Clean-clone verification and the `v0.1.0` release.
+- Annotated `v0.1.0` tag and public GitHub Release.
 - Clean-clone installation, test, demo and Docker verification.
 - Public edited demo video and LinkedIn case study.
 - Public hosting target and deployment; hosting is optional for the portfolio release.

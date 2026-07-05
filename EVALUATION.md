@@ -368,3 +368,32 @@ complete only when every required gate is PASS against the same release commit.
 Public cloud hosting, live Qwen/Ollama calls, multi-user identity, hybrid
 retrieval, a full 118-second video, and LinkedIn publication are explicitly
 outside the v0.1.0 completion gate.
+
+### Iteration 12 result before tagging
+
+Verified against public commit `8435716d47b93a470a4a79eb65aa99de38e7034d`
+on 2026-07-05.
+
+- R12.1: **PASS**; the public canonical repository is
+  `panualaluusua/contextvault-memoryagent`, and local `main` tracks
+  `origin/main`.
+- R12.2: **PASS**; hosted GitHub Actions run `28740600253` completed
+  successfully for the verified commit.
+- R12.3: **PASS**; a new clone from the public GitHub URL installed in a new
+  Python 3.11 virtual environment with `pip install -e ".[dev]"`.
+- R12.4: **PASS**; Ruff, MyPy over 17 source files, and 47/47 tests passed in
+  the clean clone.
+- R12.5: **PASS after one RALP repair**; the demo proved governed allow/block,
+  cross-session recall, stale exclusion, selected source and receipt. The first
+  evaluation check exposed an ambiguous summary, so the report and regression
+  test were repaired to state `Golden cases: 3/3 passed` explicitly. Recall@3
+  remained 1.000 and MRR 0.833.
+- R12.6: **PASS**; the clean clone built `contextvault:v0.1.0-verify`, ran as
+  UID `10001`, and returned `status: ok` from the health endpoint.
+- R12.7: **PASS**; the README contains the canonical URL and CI badge, active
+  Markdown links resolve, and status/roadmap documents match the release state.
+- R12.8: **PASS**; tracked-file and full Git-patch scans found no raw videos,
+  `.env`, databases, traces, private planning directories, personal paths,
+  private keys, AWS keys, or plausible live API keys.
+- R12.9: **PENDING** until the evidence commit passes hosted CI and the
+  annotated tag plus GitHub Release are created for that exact commit.

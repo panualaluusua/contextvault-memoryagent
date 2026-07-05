@@ -54,9 +54,13 @@ def run_evaluation(database: Path, vault: Path, fixture_path: Path) -> dict:
             recall_at_3=recall_at_3, reciprocal_rank=reciprocal_rank,
             retrieval_latency_ms=round(retrieval_latency_ms, 3),
         ))
+    passed_case_count = sum(
+        result.expected_passed == result.expected_checks for result in results
+    )
     return {
         "fixture_version": fixture["version"],
         "case_count": len(results),
+        "passed_case_count": passed_case_count,
         "all_expected_passed": all(r.expected_passed == r.expected_checks for r in results),
         "synthetic_corpus_version": CORPUS_VERSION,
         "synthetic_memory_count": len(synthetic),
@@ -74,7 +78,7 @@ def render_markdown(report: dict) -> str:
     lines = [
         "# ContextVault baseline evaluation", "",
         f"Fixture version: {report['fixture_version']}",
-        f"Cases: {report['case_count']}",
+        f"Golden cases: {report['passed_case_count']}/{report['case_count']} passed",
         f"All expected memory-pack checks passed: {report['all_expected_passed']}",
         f"Synthetic distractor corpus: v{report['synthetic_corpus_version']} / {report['synthetic_memory_count']} memories",
         f"Citation-contract coverage with memory: {report['citation_contract_with_memory']:.0%}",

@@ -10,6 +10,10 @@ Python package, runs through CLI, HTTP, or read-only MCP, builds as a non-root
 Docker image, and needs no cloud credentials for its demo, tests, or
 deterministic evaluation.
 
+Release `v0.1.0` was published on 2026-07-05 from commit `4c0518f` after hosted
+CI and clean-clone verification:
+<https://github.com/panualaluusua/contextvault-memoryagent/releases/tag/v0.1.0>.
+
 ## Working now
 
 - Typed and temporal Markdown/YAML validation and ingestion.
@@ -69,8 +73,6 @@ Earlier milestone evidence remains in `EVALUATION.md`.
 
 ## Not completed
 
-- Annotated `v0.1.0` tag and public GitHub Release.
-- Clean-clone installation, test, demo and Docker verification.
 - Public edited demo video and LinkedIn case study.
 - Public hosting target and deployment; hosting is optional for the portfolio release.
 - Live Qwen call and live Ollama smoke; both are optional.

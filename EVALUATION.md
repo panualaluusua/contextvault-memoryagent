@@ -395,5 +395,9 @@ on 2026-07-05.
 - R12.8: **PASS**; tracked-file and full Git-patch scans found no raw videos,
   `.env`, databases, traces, private planning directories, personal paths,
   private keys, AWS keys, or plausible live API keys.
-- R12.9: **PENDING** until the evidence commit passes hosted CI and the
-  annotated tag plus GitHub Release are created for that exact commit.
+- R12.9: **PASS**; annotated tag `v0.1.0` resolves to release commit
+  `4c0518f8d1c8b1dd7bc1df17050a3e503326dc5b`, hosted CI run `28747886902`
+  passed for that commit, and the public GitHub Release is available at
+  <https://github.com/panualaluusua/contextvault-memoryagent/releases/tag/v0.1.0>.
+
+**Iteration 12 final result: PASS (9/9 required gates).**

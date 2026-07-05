@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: python -m pip install --upgrade pip setuptools wheel
+      - run: python -m pip install -e ".[dev]"
+      - run: python -m ruff check src tests
+      - run: python -m mypy
+      - run: python -m pytest -q
+      - run: python -m build
+      - run: python -m pip_audit .
+
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build --tag contextvault:ci .
+      - run: docker run --rm contextvault:ci python -m contextvault --help

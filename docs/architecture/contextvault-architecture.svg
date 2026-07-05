@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">ContextVault MemoryAgent architecture</title>
+  <desc id="desc">Markdown and governed writes flow through validation into DuckDB, truthiness and retrieval, then a budgeted memory pack reaches agents through CLI, HTTP and read-only MCP.</desc>
+  <defs>
+    <style>
+      .bg{fill:#0b1020}.box{fill:#172036;stroke:#68d5ff;stroke-width:2}.accent{fill:#162d2a;stroke:#62e6a7;stroke-width:2}
+      .optional{fill:#2d2237;stroke:#c99cff;stroke-width:2;stroke-dasharray:8 6}.title{fill:#f4f7ff;font:700 24px Arial}
+      .text{fill:#e8eefc;font:16px Arial}.small{fill:#aebbd5;font:13px Arial}.arrow{stroke:#7f91b5;stroke-width:3;fill:none;marker-end:url(#head)}
+    </style>
+    <marker id="head" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7f91b5"/></marker>
+  </defs>
+  <rect class="bg" width="1200" height="680" rx="20"/>
+  <text class="title" x="50" y="52">ContextVault — auditable long-term memory for AI agents</text>
+  <rect class="box" x="50" y="100" width="250" height="95" rx="14"/><text class="text" x="78" y="137">Markdown demo vault</text><text class="small" x="78" y="165">typed + temporal records</text>
+  <rect class="box" x="50" y="245" width="250" height="95" rx="14"/><text class="text" x="78" y="282">Governed session writes</text><text class="small" x="78" y="310">allow / redact / quarantine / block</text>
+  <rect class="accent" x="390" y="172" width="260" height="110" rx="14"/><text class="text" x="425" y="212">Schema validation</text><text class="small" x="425" y="241">YAML + Markdown ingest</text>
+  <rect class="accent" x="735" y="155" width="300" height="145" rx="14"/><text class="text" x="770" y="197">DuckDB MemoryService</text><text class="small" x="770" y="226">SQL retrieval + relations</text><text class="small" x="770" y="250">process-local write lock</text>
+  <rect class="box" x="390" y="375" width="260" height="120" rx="14"/><text class="text" x="425" y="414">Retrieval + truthiness</text><text class="small" x="425" y="442">stale / supersedes / contradicts</text><text class="small" x="425" y="466">ranking + context budget</text>
+  <rect class="accent" x="735" y="375" width="300" height="120" rx="14"/><text class="text" x="770" y="414">Memory pack + receipt</text><text class="small" x="770" y="442">citations + typed edges</text><text class="small" x="770" y="466">metadata-only JSONL trace</text>
+  <rect class="box" x="450" y="555" width="260" height="80" rx="14"/><text class="text" x="500" y="592">MemoryAgent</text><text class="small" x="500" y="616">provider-neutral</text>
+  <rect class="box" x="800" y="545" width="150" height="85" rx="14"/><text class="text" x="837" y="580">Mock</text><text class="small" x="823" y="605">deterministic</text>
+  <rect class="optional" x="980" y="545" width="160" height="85" rx="14"/><text class="text" x="1012" y="580">Qwen</text><text class="small" x="1004" y="605">optional</text>
+  <rect class="box" x="60" y="520" width="250" height="105" rx="14"/><text class="text" x="97" y="560">CLI + HTTP + MCP</text><text class="small" x="97" y="586">Codex / Claude / Docker</text>
+  <path class="arrow" d="M300 148 H345 Q365 148 390 205"/><path class="arrow" d="M300 292 H345 Q365 292 390 247"/>
+  <path class="arrow" d="M650 227 H735"/><path class="arrow" d="M885 300 V345 Q885 365 650 420"/>
+  <path class="arrow" d="M650 435 H735"/><path class="arrow" d="M800 495 Q760 535 710 580"/>
+  <path class="arrow" d="M710 595 H800"/><path class="arrow" d="M950 587 H980"/><path class="arrow" d="M450 595 H310"/>
+</svg>

@@ -1,0 +1,13 @@
+services:
+  contextvault:
+    build: .
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      CONTEXTVAULT_API_TOKEN: ${CONTEXTVAULT_API_TOKEN:-}
+    volumes:
+      - contextvault-data:/data
+    restart: unless-stopped
+
+volumes:
+  contextvault-data:

@@ -1,0 +1,28 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.pytest-tmp/
+.mypy_cache/
+.ruff_cache/
+.venv/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+*.duckdb
+*.duckdb.wal
+*.db
+*.jsonl
+*.log
+*.mp4
+.env
+.env.*
+!.env.example
+.tmp/
+
+# Local planning and portfolio-production material. These are not part of the
+# public product release.
+tasks.md
+docs/archive/
+docs/portfolio/

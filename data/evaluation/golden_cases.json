@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "preference-recall",
+      "task": "What project preferences should guide the architecture?",
+      "budget": 800,
+      "must_contain": ["[preference]", "source: preferences/user-preferences.md"],
+      "expected_slugs": ["user-prefers-agentic-infra"]
+    },
+    {
+      "id": "stale-correction",
+      "task": "Is grep-only search the current structured memory architecture?",
+      "budget": 1400,
+      "must_contain": ["Excluded stale memory", "-[supersedes]->", "source: decisions/adr-001-memory-service.md"],
+      "expected_slugs": ["adr-001-memory-service"]
+    },
+    {
+      "id": "strict-budget",
+      "task": "Qwen memory architecture project preferences",
+      "budget": 700,
+      "must_contain": ["# Memory Pack", "## Warnings"],
+      "expected_slugs": ["user-prefers-agentic-infra"]
+    }
+  ]
+}
